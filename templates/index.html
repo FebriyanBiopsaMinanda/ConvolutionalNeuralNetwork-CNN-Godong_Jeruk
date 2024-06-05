@@ -35,59 +35,53 @@
             </div>
         </div>
 
-        <!-- Left side columns -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="row">
-                <!-- Import Gambar -->
-                <div class="col-12">
-                    <div class="card">
+                <!-- Black Spot -->
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card sales-card">
 
-                        <div class="card-body">
-                            <h5 class="card-title">Import Gambar</h5>
-                            <form action="/submit" method="post" enctype="multipart/form-data">
-                                <label for="images" class="drop-container" id="dropcontainer">
-                                    <span class="drop-title">Drop files here</span>
-                                    or
-                                    <input type="file" id="images" id="file" name="file" required>
-                                </label><br>
-                                
-                                <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-                            </form>
+                        <div class="card-body" style="text-align: center;">
+                            <h1 class="card-title">Black Spot</h1>
+                            <img src="/static/assets/img/Black Spot.png" height="200px">
                         </div>
                     </div>
-                </div><!-- End Import Gambar -->
+                </div>
 
-            </div>
-        </div><!-- End Left side columns -->
-
-        <!-- Right side columns -->
-        <div class="col-lg-4">
-
-            <!-- Result -->
-            <div class="card">
-
-                <div class="card-body">
-                    <h5 class="card-title">Hasil Prediksi</h5>
-
-                    <div class="text-center">
-                        {% if img_path %}
-                        <img src="{{img_path}}" alt="gambar prediksi" height="50%" width="50%"><br><br>
-                        {% endif %}
-                        {% if predictionalex %}
-                        <h3> Prediction Alexnet</h3>
-                        <h5>Prediction : <i> {{predictionalex}}  </i> <br>
-                            Confidence : <i> {{confidencealex}}  </i>
-                        </h5>
-                        {% endif %}
-                        {% if predictionXception %}
-                        <h3> Prediction Xception</h3>
-                        <h5>Prediction : <i> {{predictionXception}} </i> <br>
-                            Confidence : <i> {{confidenceXception}} </i>
-                        </h5>
-                        {% endif %}
+                <!-- Canker -->
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card sales-card">
+                
+                        <div class="card-body" style="text-align: center;">
+                            <h1 class="card-title">Canker</h1>
+                            <img src="/static/assets/img/Canker.png" height="200px">
+                        </div>
                     </div>
                 </div>
-            </div><!-- End Result-->
+
+                <!-- Grenning -->
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card">
+
+                        <div class="card-body" style="text-align: center;">
+                            <h1 class="card-title">Grenning</h1>
+                            <img src="/static/assets/img/Grenning.png" height="200px">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healty -->
+                <div class="col-xxl-3 col-md-6">
+                    <div class="card info-card sales-card">
+
+                        <div class="card-body" style="text-align: center;">
+                            <h1 class="card-title">Healty</h1>
+                            <img src="/static/assets/img/Healty.png" height="200px">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>

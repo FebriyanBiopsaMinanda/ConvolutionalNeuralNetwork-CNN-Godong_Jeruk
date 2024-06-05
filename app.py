@@ -29,6 +29,14 @@ def allowed_file(filename):
 def main():
 	return render_template("index.html")
 
+@app.route("/dashboard", methods=['GET', 'POST'])
+def dashboard():
+	return render_template("index.html")
+
+@app.route("/clasification")
+def clasification():
+    return render_template("classification.html")
+
 @app.route('/submit', methods=['POST'])
 def predict():
     if 'file' not in request.files:
@@ -79,7 +87,7 @@ def predict():
     #     "confidence": '{:2.0f}%'.format(100 * np.max(prediction_array))
     # }
 	
-    return render_template("index.html", img_path = predict_image_path,
+    return render_template("classification.html", img_path = predict_image_path,
                         predictionalex = class_names[np.argmax(prediction_array_alex)],
                         confidencealex = '{:2.0f}%'.format(100 * np.max(prediction_array_alex)),
                         predictionXception = class_names[np.argmax(prediction_array_Xception)],
